@@ -56,16 +56,16 @@
 \newcommand{\figpdf}[3]{
 \begin{figure}[htp]
 \centering
-\includegraphics[width={#3}]{fig/#2.pdf}
+\includegraphics[width={#3}]{code/fig/#2.pdf}
 \caption{{#1}}
 \label{fig:#2}
 \end{figure}
 }
 
 \newcommand{\figpng}[3]{
-\begin{figure*}[htp]
+\begin{figure}[htp]
 \centering
-\includegraphics[width={#3}]{fig/#2.png}
+\includegraphics[width={#3}]{code/fig/#2.png}
 \caption{{#1}}
 \label{fig:#2}
 \end{figure}
@@ -74,7 +74,7 @@
 \newcommand{\figany}[4]{
 \begin{figure}[htp]
 \centering
-\includegraphics[width={#4}]{fig/#2.#3}
+\includegraphics[width={#4}]{code/fig/#2.#3}
 \caption{{#1}}
 \label{fig:#2}
 \end{figure}
@@ -101,7 +101,7 @@ Fig. \ref{fig:#1}
         commentstyle=\it\color[RGB]{100,100,100},                % 设置代码注释的格式
         stringstyle=\ttfamily\color[RGB]{0,0,0},   % 设置字符串格式
         showstringspaces=false,                              % 不显示字符串中的空格
-        basicstyle=\ttfamily，
+        basicstyle=\ttfamily,
     }
 \else
     \ifdefined\@eee@editing
@@ -121,7 +121,7 @@ Fig. \ref{fig:#1}
             commentstyle=\it\color[RGB]{150,150,150},                % 设置代码注释的格式
             stringstyle=\ttfamily\color[RGB]{200,120,200},   % 设置字符串格式
             showstringspaces=false,                              % 不显示字符串中的空格
-            basicstyle=\ttfamily，
+            basicstyle=\ttfamily,
         }
     \else
         \newcommand{\logofile}{fig/xjtlu_logo_blue.pdf}
@@ -136,7 +136,7 @@ Fig. \ref{fig:#1}
             commentstyle=\it\color[RGB]{20,100,100},                % 设置代码注释的格式
             stringstyle=\ttfamily\color[RGB]{0,120,0},   % 设置字符串格式
             showstringspaces=false,                              % 不显示字符串中的空格
-            basicstyle=\ttfamily，
+            basicstyle=\ttfamily,
         }
     \fi
 \fi
@@ -172,3 +172,7 @@ Fig. \ref{fig:#1}
             }
         }
 }
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{diagbox}
+\usepackage[titletoc]{appendix}

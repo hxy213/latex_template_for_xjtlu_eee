@@ -18,3 +18,22 @@ http://blog.feieee.com/latex
 + 去掉了 xjtlu.sty 文件，不需要再使用 xjtlu Package，改由 eeereport.cls 文件来定义模板（和书写无关）
 + 在 documenclass 定义中增加了多项设置：包括字体风格、是否为打印件（hardcopy）以及是否为编辑模式（深色背景浅色文字和logo的颜色）
 + 增加了简单的程序代码添加方式
+
+
+
+**Update 2021-8**
+
+author: hxy
+
+以下是我在模板使用过程中，进行的一些符合我使用习惯的修改。
+
+https://mp.weixin.qq.com/s/6kSk3WIPlQGds3boFAmvjg
+
+- eeereport.cls中104，124，139行逗号修改，66行去掉*号
+- 将正文修改到文件夹body中，分为单独的tex文件，防止文章太长导致眼花
+- 目录增加跳转功能
+- 增加附录添加功能
+- figure读取的目录改为code/fig/
+
+
+

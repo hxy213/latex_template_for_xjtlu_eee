@@ -1,0 +1,97 @@
+
+{
+  // Latex workshop
+
+  "latex-workshop.message.error.show": true,
+  "latex-workshop.message.warning.show": true,
+  
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex",
+      "tools": [
+        "xelatex"
+      ],
+    },
+    {
+      "name": "pdflatex",
+      "tools": [
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "xe->bib->xe->xe",
+      "tools": [
+        "xelatex",
+        "bibtex",
+        "xelatex",
+        "xelatex"
+      ]
+    },
+    {
+      "name": "pdf->bib->pdf->pdf",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "external", //将外部PDF设为默认
+  "latex-workshop.view.pdf.ref.viewer":"external", //外部PDF设置
+  "latex-workshop.view.pdf.external.viewer.command": "C:/Users/xiaoy/AppData/Local/SumatraPDF/SumatraPDF.exe",
+  "latex-workshop.view.pdf.external.viewer.args": [
+  "%PDF%"
+  ],
+  "latex-workshop.view.pdf.external.synctex": {
+    "command": "C:/Users/xiaoy/AppData/Local/SumatraPDF/SumatraPDF.exe",
+    "args": [
+    "-forward-search",
+    "%TEX%",
+    "%LINE%",
+    "-reuse-instance",
+    "-inverse-search",
+    "C:\\Users\\xiaoy\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe", // 未配置环境变量时必须使用Code.exe的全路径
+    "\"C:\\Users\\xiaoy\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"",
+    "%PDF%",
+    ]
+  },
+  "latex-workshop.latex.autoBuild.run": "never",
+
+  // "C:\Users\xiaoy\AppData\Local\Programs\Microsoft VS Code\Code.exe" "C:\Users\xiaoy\AppData\Local\Programs\Microsoft VS Code\resources\app\out\cli.js" -g "%f":"%l"
+  
+}
+
+
+
+
